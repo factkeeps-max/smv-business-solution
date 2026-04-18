@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us – SP Mind Vision</title>
+  <meta name="description" content="Get in touch with SP Mind Vision. Email us at care@spmindvision.in for all business enquiries."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact-left h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--forest);
+      margin-bottom: 1rem;
+    }
+
+    .contact-left p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.25s ease;
+    }
+
+    .contact-method:first-of-type { border-top: 1px solid var(--border); }
+
+    .contact-method:hover { padding-left: 0.5rem; }
+    .contact-method:hover .cm-label { color: var(--gold); }
+
+    .cm-icon {
+      width: 44px; height: 44px;
+      background: var(--cream);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      transition: background 0.25s;
+    }
+
+    .contact-method:hover .cm-icon { background: rgba(184,150,62,0.15); }
+
+    .cm-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.2rem;
+      transition: color 0.25s;
+    }
+
+    .cm-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--forest);
+    }
+
+    .cm-arrow {
+      margin-left: auto;
+      color: var(--border);
+      font-size: 1.2rem;
+      transition: all 0.25s;
+    }
+
+    .contact-method:hover .cm-arrow { color: var(--gold); transform: translateX(4px); }
+
+    /* Right side — service enquiry list */
+    .contact-right {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      padding: 3rem;
+      border-radius: 2px;
+    }
+
+    .contact-right h3 {
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-right > p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+
+    .enquiry-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .enquiry-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.9rem 1rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      cursor: default;
+      transition: all 0.2s;
+    }
+
+    .enquiry-item:hover {
+      border-color: var(--gold);
+      color: var(--forest);
+    }
+
+    .enquiry-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .contact-right .email-prompt {
+      background: var(--forest);
+      color: var(--cream);
+      padding: 1.5rem;
+      border-radius: 2px;
+      text-align: center;
+    }
+
+    .contact-right .email-prompt p {
+      font-size: 0.85rem;
+      color: rgba(245,240,230,0.6);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-right .email-prompt a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    .contact-right .email-prompt a:hover { color: var(--gold-light); }
+
+    @media(max-width:900px){
+      .contact-layout { grid-template-columns:1fr; gap:3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-dot"></span> SP Mind Vision
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get in Touch →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <span class="eyebrow">Get in Touch</span>
+      <h1 style="font-size:clamp(3rem,6vw,5rem); max-width:700px; margin-bottom:1rem;">Let's talk about<br><em style="color:var(--gold-light);">your business.</em></h1>
+      <p style="font-size:1.05rem; color:rgba(245,240,230,0.62); max-width:520px; padding-bottom:2.5rem;">Tell us what you need — we'll listen carefully and recommend the right solution. No jargon, no obligation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- LEFT: contact methods -->
+      <div class="contact-left">
+        <span class="eyebrow">Reach Us</span>
+        <h2>We'd love to hear from you.</h2>
+        <p>Write to us with your query and our team will respond personally — typically within one business day. We take every enquiry seriously.</p>
+
+        <a href="mailto:care@spmindvision.in" class="contact-method">
+          <div class="cm-icon">✉</div>
+          <div>
+            <div class="cm-label">Email Us</div>
+            <div class="cm-value">care@spmindvision.in</div>
+          </div>
+          <span class="cm-arrow">→</span>
+        </a>
+
+        <a href="https://www.spmindvision.in" target="_blank" rel="noopener" class="contact-method">
+          <div class="cm-icon">🌐</div>
+          <div>
+            <div class="cm-label">Website</div>
+            <div class="cm-value">www.spmindvision.in</div>
+          </div>
+          <span class="cm-arrow">→</span>
+        </a>
+
+        <div style="margin-top:3rem;">
+          <p style="font-size:0.85rem; color:var(--muted); line-height:1.7;">
+            <strong style="color:var(--forest);">Response time:</strong> We aim to respond to all email enquiries within one business day. For complex queries, we may schedule a brief call to understand your needs better.
+          </p>
+          <p style="font-size:0.85rem; color:var(--muted); line-height:1.7; margin-top:0.8rem;">
+            <strong style="color:var(--forest);">Confidentiality:</strong> Everything you share with us is treated with the highest level of confidentiality and professional discretion.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: what to write about -->
+      <div class="contact-right">
+        <h3>What would you like help with?</h3>
+        <p>Mention the area you're interested in when you write — it helps us direct your query to the right expert and respond faster.</p>
+
+        <div class="enquiry-list">
+          <div class="enquiry-item">Accounting & Bookkeeping</div>
+          <div class="enquiry-item">GST Registration & Monthly Returns</div>
+          <div class="enquiry-item">Income Tax Filing & Planning</div>
+          <div class="enquiry-item">HR & Payroll Management</div>
+          <div class="enquiry-item">PF, ESI & Labour Compliance</div>
+          <div class="enquiry-item">Legal Contracts & Agreements</div>
+          <div class="enquiry-item">Trademark & IP Registration</div>
+          <div class="enquiry-item">Company / LLP Incorporation</div>
+          <div class="enquiry-item">MSME / Startup India Registration</div>
+          <div class="enquiry-item">Marketplace Account Management</div>
+          <div class="enquiry-item">Digital Marketing & SEO</div>
+          <div class="enquiry-item">Multi-Channel Software Setup</div>
+        </div>
+
+        <div class="email-prompt">
+          <p>Send your enquiry to</p>
+          <a href="mailto:care@spmindvision.in">care@spmindvision.in</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US STRIP -->
+<section class="section-sm bg-forest">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:3rem; text-align:center;">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">1 Day</div>
+        <div style="font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:rgba(245,240,230,0.5);">Typical Response Time</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">100%</div>
+        <div style="font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:rgba(245,240,230,0.5);">Confidential</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:700; color:var(--gold); margin-bottom:0.5rem;">PAN India</div>
+        <div style="font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; color:rgba(245,240,230,0.5);">Coverage</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SP Mind Vision<br><span style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:400; color:var(--gold); letter-spacing:2px; text-transform:uppercase;">Making Trust</span></div>
+        <p>A complete business solution provider for startups, SMEs, and online sellers across India — accounts, tax, legal, HR and more.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#accounts">Accounting & Bookkeeping</a></li>
+          <li><a href="services.html#tax">GST & Tax Compliance</a></li>
+          <li><a href="services.html#hr">HR & Payroll</a></li>
+          <li><a href="services.html#legal">Legal & Regulatory</a></li>
+          <li><a href="services.html#registration">Business Registration</a></li>
+          <li><a href="services.html#marketplace">Marketplace Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:care@spmindvision.in" class="footer-contact-link"><span>✉</span> care@spmindvision.in</a>
+        <a href="https://www.spmindvision.in" class="footer-contact-link"><span>🌐</span> www.spmindvision.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SP Mind Vision. All rights reserved.</span>
+      <span>Making Trust · spmindvision.in</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

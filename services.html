@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services – SP Mind Vision</title>
+  <meta name="description" content="SP Mind Vision's full service portfolio: Accounting, Bookkeeping, HR & Payroll, GST & Tax, Legal, Business Registration, Marketplace Management and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .service-block {
+      padding: 80px 0;
+      scroll-margin-top: 80px;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-block:last-child { border-bottom: none; }
+    .service-block-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .service-block-left { position: sticky; top: 100px; }
+    .service-block-left .big-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 6rem;
+      font-weight: 700;
+      color: var(--border);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .service-block-left h2 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--forest);
+      margin-bottom: 0.8rem;
+    }
+    .service-block-left p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+    }
+    .service-block-right { padding-top: 0.5rem; }
+
+    .sub-service {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .sub-service:first-child { padding-top: 0; }
+    .sub-service:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .sub-service h3 {
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .sub-service h3 .icon {
+      width: 32px; height: 32px;
+      background: rgba(184,150,62,0.12);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .sub-service p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      color: var(--ink-mid);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.8rem;
+      border-radius: 2px;
+      letter-spacing: 0.3px;
+    }
+
+    /* nav pills for jumping to sections */
+    .service-nav {
+      background: var(--cream);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 68px;
+      z-index: 100;
+      padding: 0;
+    }
+
+    .service-nav-inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .service-nav-inner::-webkit-scrollbar { display: none; }
+
+    .service-nav-inner a {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 1.1rem 1.5rem;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .service-nav-inner a:hover {
+      color: var(--forest);
+      border-bottom-color: var(--gold);
+    }
+
+    @media(max-width:900px){
+      .service-block-inner { grid-template-columns:1fr; gap:2rem; }
+      .service-block-left { position: static; }
+      .service-block-left .big-num { font-size:4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-dot"></span> SP Mind Vision
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get in Touch →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero cream-after">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Services</div>
+      <span class="eyebrow">Our Services</span>
+      <h1 style="font-size:clamp(3rem,6vw,5rem); max-width:700px; margin-bottom:1rem;">Everything under<br><em style="color:var(--gold-light);">one roof.</em></h1>
+      <p style="font-size:1.05rem; color:rgba(245,240,230,0.62); max-width:520px; padding-bottom:2.5rem;">From company registration to monthly compliance, HR to legal contracts — we cover every business function so you can stay focused on growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE NAV PILLS -->
+<div class="service-nav">
+  <div class="container">
+    <div class="service-nav-inner">
+      <a href="#accounts">Accounting</a>
+      <a href="#tax">GST & Tax</a>
+      <a href="#hr">HR & Payroll</a>
+      <a href="#legal">Legal</a>
+      <a href="#registration">Registration</a>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#marketing">Marketing</a>
+      <a href="#software">Software</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── ACCOUNTING & BOOKKEEPING ── -->
+<section class="service-block" id="accounts">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">01</div>
+        <h2>Accounting & Bookkeeping</h2>
+        <p>The financial backbone of every healthy business. We keep your books clean, accurate and always audit-ready — so you can make decisions with confidence.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">📒</span>Daily & Monthly Bookkeeping</h3>
+          <p>Systematic recording of all financial transactions — purchases, sales, receipts and payments — ensuring nothing slips through the cracks.</p>
+          <div class="tag-list"><span class="tag">Tally</span><span class="tag">QuickBooks</span><span class="tag">Zoho Books</span><span class="tag">Excel-based</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📊</span>Financial Statements & MIS Reports</h3>
+          <p>Monthly P&L, balance sheets and management information reports that give you a clear picture of business performance.</p>
+          <div class="tag-list"><span class="tag">P&L Statement</span><span class="tag">Balance Sheet</span><span class="tag">Cash Flow</span><span class="tag">MIS Dashboard</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🏦</span>Bank Reconciliation</h3>
+          <p>Regular matching of your bank statements against your books — catching discrepancies, preventing fraud and keeping records accurate.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📋</span>Accounts Payable & Receivable</h3>
+          <p>Managing vendor payments and tracking client receivables so your cash flow stays healthy and relationships remain strong.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🔍</span>Audit Support & Finalisation</h3>
+          <p>Year-end account finalisation, audit trail preparation and statutory audit support to keep you fully compliant.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GST & TAX ── -->
+<section class="service-block" id="tax" style="background:var(--cream);">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">02</div>
+        <h2>GST & Tax Compliance</h2>
+        <p>Navigating India's complex tax landscape is our job, not yours. We handle all registrations, filings and advisory so you stay compliant and minimise your tax burden legally.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">🧾</span>GST Registration & Monthly Returns</h3>
+          <p>End-to-end GST management — from initial registration to timely GSTR-1, GSTR-3B, GSTR-9 filings every month and year.</p>
+          <div class="tag-list"><span class="tag">GSTR-1</span><span class="tag">GSTR-3B</span><span class="tag">GSTR-9</span><span class="tag">Input Tax Credit</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">💰</span>Income Tax Filing & Planning</h3>
+          <p>Individual and business income tax returns filed accurately and on time, with smart planning to optimise your tax liability throughout the year.</p>
+          <div class="tag-list"><span class="tag">ITR Filing</span><span class="tag">Tax Planning</span><span class="tag">Advance Tax</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📌</span>TDS Compliance</h3>
+          <p>TDS deduction calculations, timely deposits, quarterly returns (24Q, 26Q) and TDS certificates — managed so you never face penalties.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🏢</span>Professional Tax</h3>
+          <p>State-wise professional tax registration and monthly/annual filings for your employees, handled without any hassle.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HR & PAYROLL ── -->
+<section class="service-block" id="hr">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">03</div>
+        <h2>HR & Payroll Services</h2>
+        <p>Your people are your greatest asset. We help you manage them professionally — from hiring paperwork to monthly payroll to statutory compliance.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">💳</span>Payroll Processing</h3>
+          <p>Accurate monthly payroll computation, salary slips and disbursement support — ensuring every employee is paid correctly and on time, every month.</p>
+          <div class="tag-list"><span class="tag">Salary Computation</span><span class="tag">Payslips</span><span class="tag">Full & Final Settlement</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🛡️</span>PF & ESI Compliance</h3>
+          <p>Provident Fund and ESI registration, monthly contribution calculations, challan deposits and annual returns — fully managed and always on time.</p>
+          <div class="tag-list"><span class="tag">PF Registration</span><span class="tag">ESI Registration</span><span class="tag">Monthly Filings</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📄</span>HR Policy & Documentation</h3>
+          <p>Drafting employee handbooks, offer letters, appointment letters, NDAs and HR policies that protect both your business and your employees.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🤝</span>Employee Onboarding & Exit</h3>
+          <p>Structured onboarding documentation, background verification coordination, and compliant exit processes including gratuity and F&F settlement.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📝</span>Labour Law Compliance</h3>
+          <p>Shops & Establishment Act registration, labour law audits and compliance advisory to keep your business legally sound as it grows.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LEGAL ── -->
+<section class="service-block" id="legal" style="background:var(--cream);">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">04</div>
+        <h2>Legal & Regulatory</h2>
+        <p>Sound legal foundations give your business the confidence to grow. We cover contracts, IP, compliance and advisory — practical legal support without the complexity.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">📜</span>Contract Drafting & Review</h3>
+          <p>Clear, enforceable contracts for vendor agreements, client engagements, partnership deeds, NDAs and employment — drafted to protect your interests.</p>
+          <div class="tag-list"><span class="tag">Vendor Contracts</span><span class="tag">NDAs</span><span class="tag">MoUs</span><span class="tag">Shareholder Agreements</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">™</span>Trademark & IP Registration</h3>
+          <p>Protecting your brand name, logo, products and creative work through trademark, copyright and patent filings — securing what you've built.</p>
+          <div class="tag-list"><span class="tag">Trademark</span><span class="tag">Copyright</span><span class="tag">Brand Protection</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">✅</span>Legal Compliance Audit</h3>
+          <p>A structured review of your business's legal health — identifying gaps, risks and recommended actions across all applicable laws and regulations.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🏛️</span>Regulatory Advisory</h3>
+          <p>Business-specific guidance on FEMA, RBI regulations, sector-specific licences, consumer protection and other regulatory requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BUSINESS REGISTRATION ── -->
+<section class="service-block" id="registration">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">05</div>
+        <h2>Business Registration & Incorporation</h2>
+        <p>Start right. We help you choose the right business structure and handle every registration — fast, accurate and fully compliant.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">🏢</span>Company Incorporation</h3>
+          <p>Private Limited Company, One Person Company and Section 8 Company registration — including DIN, DSC, MCA filings and Certificate of Incorporation.</p>
+          <div class="tag-list"><span class="tag">Pvt. Ltd.</span><span class="tag">OPC</span><span class="tag">Section 8</span><span class="tag">MCA Filings</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🤝</span>LLP & Partnership Registration</h3>
+          <p>LLP incorporation, partnership firm registration and deed drafting — structured for flexibility, tax efficiency and clear profit-sharing.</p>
+          <div class="tag-list"><span class="tag">LLP</span><span class="tag">Partnership Deed</span><span class="tag">Reconstitution</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🌱</span>MSME & Startup India</h3>
+          <p>Udyam (MSME) registration and Startup India DPIIT recognition — unlocking government benefits, schemes and preferential treatment for your business.</p>
+          <div class="tag-list"><span class="tag">Udyam Certificate</span><span class="tag">DPIIT Recognition</span><span class="tag">Tax Exemptions</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🪪</span>Licences & Registrations</h3>
+          <p>Trade licence, FSSAI, Import Export Code (IEC), drug licence, Shops & Establishment and other sector-specific registrations handled end-to-end.</p>
+          <div class="tag-list"><span class="tag">Trade Licence</span><span class="tag">FSSAI</span><span class="tag">IEC</span><span class="tag">Shops Act</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MARKETPLACE ── -->
+<section class="service-block" id="marketplace" style="background:var(--cream);">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">06</div>
+        <h2>Marketplace Management</h2>
+        <p>For businesses selling online — complete account management across all major Indian and global marketplaces, so you can focus on your products.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">🛒</span>Account Launch & Management</h3>
+          <p>End-to-end setup and ongoing management of your Amazon, Flipkart and other marketplace seller accounts — listings, inventory, orders and performance.</p>
+          <div class="tag-list"><span class="tag">Amazon</span><span class="tag">Flipkart</span><span class="tag">Myntra</span><span class="tag">Meesho</span><span class="tag">Snapdeal</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📦</span>Listing Creation & Optimisation</h3>
+          <p>Keyword-rich product titles, descriptions, bullet points and image recommendations to maximise visibility and conversion on every platform.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">⚖️</span>A-Z Claims & Dispute Resolution</h3>
+          <p>Handling buyer disputes, negative feedback, A-to-Z guarantee claims and account health issues — protecting your seller metrics and ratings.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">💹</span>Payment Reconciliation</h3>
+          <p>Full reconciliation of marketplace payments, returns and deductions — ensuring every rupee owed to you is accounted for and received.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DIGITAL MARKETING ── -->
+<section class="service-block" id="marketing">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">07</div>
+        <h2>Digital Marketing</h2>
+        <p>Getting found online — through search, social and paid advertising — is as important as the product itself. We build your digital presence the right way.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">🔍</span>SEO</h3>
+          <p>On-page and off-page search engine optimisation to rank your website and marketplace listings higher — organically, sustainably.</p>
+          <div class="tag-list"><span class="tag">Google SEO</span><span class="tag">Amazon SEO</span><span class="tag">Content Strategy</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🎯</span>Performance Advertising</h3>
+          <p>ROI-driven paid campaigns on Google, Facebook, Instagram and YouTube — managed by specialists who understand your audience and budget.</p>
+          <div class="tag-list"><span class="tag">Google Ads</span><span class="tag">Meta Ads</span><span class="tag">YouTube Ads</span></div>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">🌐</span>Website & App Development</h3>
+          <p>Professional, mobile-responsive websites and business apps that make a strong first impression and convert visitors into customers.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📱</span>Social Media Management</h3>
+          <p>Content creation, scheduling and engagement across Instagram, Facebook, LinkedIn and Twitter — building your brand consistently online.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOFTWARE ── -->
+<section class="service-block" id="software" style="background:var(--cream);">
+  <div class="container">
+    <div class="service-block-inner">
+      <div class="service-block-left">
+        <div class="big-num">08</div>
+        <h2>Multi-Channel Software Support</h2>
+        <p>Manage all your marketplace orders, inventory and returns from a single screen. Stop switching between dashboards — we integrate it all.</p>
+        <a href="contact.html" class="btn btn-gold" style="font-size:0.78rem;">Enquire →</a>
+      </div>
+      <div class="service-block-right">
+        <div class="sub-service">
+          <h3><span class="icon">⚙️</span>Unified Order Management</h3>
+          <p>All orders from Amazon, Flipkart, Snapdeal, Meesho and more — visible and manageable from a single dashboard in real time.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">📦</span>Inventory Sync</h3>
+          <p>Automatic inventory updates across all platforms — preventing overselling, underselling and stock discrepancies.</p>
+        </div>
+        <div class="sub-service">
+          <h3><span class="icon">💰</span>Payment Reconciliation Software</h3>
+          <p>The easiest way to reconcile payments across multiple marketplaces — every transaction, deduction and return tracked automatically.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="section bg-forest">
+  <div class="container" style="text-align:center; max-width:640px; margin:0 auto;">
+    <span class="eyebrow">Get Started</span>
+    <h2 class="section-title light" style="margin-bottom:1rem;">Not sure which service fits you?</h2>
+    <p class="body-lg light" style="margin:0 auto 2.5rem;">Just write to us — describe your business and we'll recommend exactly what you need. No obligation, no jargon.</p>
+    <a href="contact.html" class="btn btn-gold">Write to Us →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SP Mind Vision<br><span style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:400; color:var(--gold); letter-spacing:2px; text-transform:uppercase;">Making Trust</span></div>
+        <p>A complete business solution provider for startups, SMEs, and online sellers across India — accounts, tax, legal, HR and more.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#accounts">Accounting & Bookkeeping</a></li>
+          <li><a href="#tax">GST & Tax Compliance</a></li>
+          <li><a href="#hr">HR & Payroll</a></li>
+          <li><a href="#legal">Legal & Regulatory</a></li>
+          <li><a href="#registration">Business Registration</a></li>
+          <li><a href="#marketplace">Marketplace Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:care@spmindvision.in" class="footer-contact-link"><span>✉</span> care@spmindvision.in</a>
+        <a href="https://www.spmindvision.in" class="footer-contact-link"><span>🌐</span> www.spmindvision.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SP Mind Vision. All rights reserved.</span>
+      <span>Making Trust · spmindvision.in</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us – SP Mind Vision</title>
+  <meta name="description" content="Learn about SP Mind Vision — our story, values and commitment to helping businesses across India with complete business solutions."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-intro {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .about-intro h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      color: var(--forest);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-intro p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-right {
+      padding-top: 0.5rem;
+    }
+
+    .value-item {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .value-item:first-child { padding-top: 0; }
+    .value-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .value-item h3 {
+      font-size: 1.3rem;
+      color: var(--forest);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .value-item h3 span {
+      color: var(--gold);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .value-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .who-we-serve {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .serve-card {
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 2rem;
+      background: var(--white);
+      transition: all 0.3s ease;
+    }
+    .serve-card:hover {
+      box-shadow: 0 8px 32px rgba(26,46,31,0.1);
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
+    .serve-card .emoji { font-size: 2rem; margin-bottom: 1rem; }
+    .serve-card h3 { font-size: 1.25rem; color: var(--forest); margin-bottom: 0.6rem; }
+    .serve-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+    @media(max-width:900px){
+      .about-intro { grid-template-columns:1fr; gap:2.5rem; }
+      .who-we-serve { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:600px){
+      .who-we-serve { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="brand">
+    <span class="brand-dot"></span> SP Mind Vision
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html">Get in Touch →</a>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
+      <span class="eyebrow">Our Story</span>
+      <h1 style="font-size:clamp(3rem,6vw,5rem); max-width:700px; margin-bottom:1rem;">Built on trust.<br><em style="color:var(--gold-light);">Focused on you.</em></h1>
+      <p style="font-size:1.05rem; color:rgba(245,240,230,0.62); max-width:520px; padding-bottom:2.5rem;">SP Mind Vision was founded with a simple belief — every business, regardless of size, deserves expert support to grow and stay compliant.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT INTRO -->
+<section class="section">
+  <div class="container">
+    <div class="about-intro">
+      <div>
+        <span class="eyebrow">About SP Mind Vision</span>
+        <h2>A one-stop partner for every business need.</h2>
+        <div class="divider"></div>
+        <p>We started SP Mind Vision because we saw a real problem — businesses in India, especially small and growing ones, were spending too much time, energy and money managing compliance, paperwork and administrative functions that pulled them away from what they actually do best.</p>
+        <p>We set out to change that. By bringing together experienced professionals in accounting, tax, HR, legal and digital services under one roof, we give businesses a single, trusted partner who handles everything — from company registration on day one to ongoing monthly compliance, payroll, legal contracts and marketplace management.</p>
+        <p>Whether you're a first-time entrepreneur, an established SME or an online seller, we adapt to your needs and grow with you.</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--forest); margin-top:1.5rem; border-left:3px solid var(--gold); padding-left:1.2rem; line-height:1.5;">"Making trust" isn't just our tagline. It's the foundation of every client relationship we build.</p>
+      </div>
+      <div class="about-right">
+        <div class="value-item">
+          <h3><span>01</span> Trust First</h3>
+          <p>Every recommendation we make is in your business's best interest — honest, transparent and free of unnecessary upselling.</p>
+        </div>
+        <div class="value-item">
+          <h3><span>02</span> Deep Expertise</h3>
+          <p>Our team combines years of experience across accounting, law, HR, taxation and digital operations — so you always get the right answer.</p>
+        </div>
+        <div class="value-item">
+          <h3><span>03</span> One Roof</h3>
+          <p>No juggling between separate consultants. Everything your business needs lives under one roof, with one point of contact.</p>
+        </div>
+        <div class="value-item">
+          <h3><span>04</span> Accessibility</h3>
+          <p>Expert support shouldn't be out of reach for small businesses. We price our services fairly, with transparent fees and no hidden charges.</p>
+        </div>
+        <div class="value-item">
+          <h3><span>05</span> PAN India</h3>
+          <p>Serving businesses across India — whether you're in Delhi, Mumbai, Bangalore or a tier-2 city, we're here for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="container">
+    <div class="stat-bar-grid">
+      <div class="stat-bar-item"><div class="num">500+</div><div class="lbl">Businesses Supported</div></div>
+      <div class="stat-bar-item"><div class="num">8+</div><div class="lbl">Service Verticals</div></div>
+      <div class="stat-bar-item"><div class="num">PAN</div><div class="lbl">India Coverage</div></div>
+      <div class="stat-bar-item"><div class="num">100%</div><div class="lbl">Compliance Focused</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO WE SERVE -->
+<section class="section bg-cream">
+  <div class="container">
+    <div style="text-align:center; max-width:520px; margin:0 auto 3.5rem;">
+      <span class="eyebrow">Who We Help</span>
+      <h2 class="section-title">We work with businesses of every kind.</h2>
+    </div>
+    <div class="who-we-serve">
+      <div class="serve-card">
+        <div class="emoji">🌱</div>
+        <h3>Startups & New Businesses</h3>
+        <p>From choosing the right company structure to GST registration, MSME enrolment and your first set of compliances — we get you started right.</p>
+      </div>
+      <div class="serve-card">
+        <div class="emoji">🏢</div>
+        <h3>SMEs & Growing Firms</h3>
+        <p>Scaling businesses need robust accounting, payroll, legal contracts and compliance systems. We build and manage them as you grow.</p>
+      </div>
+      <div class="serve-card">
+        <div class="emoji">🛒</div>
+        <h3>Online Sellers & E-Commerce</h3>
+        <p>Selling on Amazon, Flipkart or your own store? We handle marketplace accounts, payment reconciliation, GST and bookkeeping for online sellers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section bg-forest">
+  <div class="container" style="text-align:center; max-width:580px; margin:0 auto;">
+    <span class="eyebrow">Work With Us</span>
+    <h2 class="section-title light" style="margin-bottom:1rem;">Let's build something solid together.</h2>
+    <p class="body-lg light" style="margin:0 auto 2.5rem;">Write to us and we'll take it from there — understanding your business and recommending exactly what you need.</p>
+    <a href="contact.html" class="btn btn-gold">Write to Us →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SP Mind Vision<br><span style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:400; color:var(--gold); letter-spacing:2px; text-transform:uppercase;">Making Trust</span></div>
+        <p>A complete business solution provider for startups, SMEs, and online sellers across India — accounts, tax, legal, HR and more.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#accounts">Accounting & Bookkeeping</a></li>
+          <li><a href="services.html#tax">GST & Tax Compliance</a></li>
+          <li><a href="services.html#hr">HR & Payroll</a></li>
+          <li><a href="services.html#legal">Legal & Regulatory</a></li>
+          <li><a href="services.html#registration">Business Registration</a></li>
+          <li><a href="services.html#marketplace">Marketplace Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:care@spmindvision.in" class="footer-contact-link"><span>✉</span> care@spmindvision.in</a>
+        <a href="https://www.spmindvision.in" class="footer-contact-link"><span>🌐</span> www.spmindvision.in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SP Mind Vision. All rights reserved.</span>
+      <span>Making Trust · spmindvision.in</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
